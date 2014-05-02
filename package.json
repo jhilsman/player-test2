@@ -1,7 +1,7 @@
 {
-    "name": "SocketioExample",
+    "name": "Player-Test2",
     "version": "0.0.1",
-    "description": "SocketioExample",
+    "description": "Player Test",
     "dependencies": {
         "socket.io": "latest",
         "moniker": "latest"
