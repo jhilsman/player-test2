@@ -1,5 +1,5 @@
 var handler = function(req, res) {
-if (req.url = "/") {
+if (req.url == "/") {
 fs.readFile('./page.html', function (err, data) {
 if(err) throw err;
 res.writeHead(200);
