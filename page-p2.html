@@ -1,0 +1,33 @@
+socket.on('welcome', function (data) {
+console.log(data);
+welcome.innerHTML = "Welcome to the game <strong>" + data.name + "</strong>";
+});
+socket.on('users', function (data) {
+allUsers.innerHTML = "<strong>Users:</strong><br />" + data.users;
+});
+socket.on('update', function (data) {
+progress.innerHTML = data.currentWidth;
+progress.style.width = parseInt(data.currentWidth) + "px";
+});
+socket.on('win', function (data) {
+results.innerHTML = data.message;
+});
+
+progress.onclick = function() {
+socket.emit("click");
+}
+
+}
+</script>
+</head>
+<body class="main">
+<div id="welcome"></div>
+<hr />
+<div id="progress"></div>
+<div id="win">150</div>
+<hr />
+<div id="users"></div>
+<hr />
+<div id="results"></div>
+</body>
+</html>

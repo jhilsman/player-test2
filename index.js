@@ -8,6 +8,16 @@ res.end(data);
 } //end if '/'
 else {
 res.writeHead(200);
+fs.readFile('./page-p1.html', function (err, data) {
+if(err) throw err;
+res.write(data);
+});
+res.write('var socket = io.connect(''http://obscure-journey-6482.herokuapp.com:' + process.env.PORT + ''');');
+fs.readFile('./page-p2.html', function (err, data) {
+if(err) throw err;
+res.end(data);
+});
+
 res.end('VEGAS BABY!');
 } // end else not '/'
 
