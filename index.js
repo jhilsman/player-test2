@@ -10,7 +10,7 @@ var io = require('socket.io').listen(app);
 var fs = require('fs');
 var Moniker = require('moniker');
 //var port = 3250;
-var port=$port
+var port=Number(process.env.PORT || 3250)
 
 app.listen(port);
 
