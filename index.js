@@ -1,10 +1,17 @@
 var handler = function(req, res) {
+if (req.url = "/") {
 fs.readFile('./page.html', function (err, data) {
 if(err) throw err;
 res.writeHead(200);
 res.end(data);
 });
-}
+} //end if '/'
+else {
+res.writehead(200);
+res.end('VEGAS BABY!');
+} // end else not '/'
+
+} //end handler = ()
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
