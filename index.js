@@ -7,7 +7,7 @@ res.end(data);
 });
 } //end if '/'
 else {
-res.writehead(200);
+res.writeHead(200);
 res.end('VEGAS BABY!');
 } // end else not '/'
 
