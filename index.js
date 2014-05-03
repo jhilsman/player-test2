@@ -9,7 +9,8 @@ var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
 var Moniker = require('moniker');
-var port = 3250;
+//var port = 3250;
+var port=$port
 
 app.listen(port);
 
